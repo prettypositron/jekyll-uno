@@ -24,6 +24,6 @@ I decided to document this for use as a potential tutorial. However, I did not h
 
 Here is just Part Two (the other two parts are still uploading to YouTube). 
 
-[![](http://img.youtube.com/vi/kPP0c73_iX4/0.jpg)](http://www.youtube.com/watch?v=kPP0c73_iX4 "")
+[![Building a PC, Part Two](http://img.youtube.com/vi/kPP0c73_iX4/0.jpg)](http://www.youtube.com/watch?v=kPP0c73_iX4 "Building a PC, part two")
 
 Bear in mind, this is the first time I have built a PC since I was 12 years old. 
