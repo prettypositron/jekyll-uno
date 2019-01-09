@@ -1,1 +1,12 @@
+---
+title:  "Built a PC"
+date:   2019-01-09 13:12:45
+categories: [PC Building]
+tags: [PC, Building, Hardware]
+---
+
+I could not resist building a new PC. I was meant to do this at the ML Neuro lab, however we ran into red tape regarding Columbia's IT Department and their contract with HP. Nonetheless, I had toxic assets (crypto) which many retailers accepted, which is folly. I long charted the price trends of various components, and made my purchases at a dip which was unsurprisingly during Black Friday. 
+
+
+
 
