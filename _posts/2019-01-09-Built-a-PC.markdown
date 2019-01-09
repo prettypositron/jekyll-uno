@@ -10,7 +10,8 @@ I could not resist building a new PC. I was meant to do this at the ML Neuro lab
 My method for choosing PC components is as follows. I go to a benchmark website such as [PassMark - G3D Mark
 High End Videocards - Updated 9th of January 2019](https://www.videocardbenchmark.net/high_end_gpus.html) and I go down the list until I find the most powerful card with the lowest price. Basically:
 
-\frac{Average G3D Mark}{Price of Product} where {Average G3D Mark Rank | Average G3D Mark Rank < 5} 
+![alt text](https://prettypositron.github.io/minimal/images/equation.png)
+
 
 In other terms, it is simply value but for high performing components. 
 
@@ -27,3 +28,5 @@ Here is just Part Two (the other two parts are still uploading to YouTube).
 [![Building a PC, Part Two](http://img.youtube.com/vi/kPP0c73_iX4/0.jpg)](http://www.youtube.com/watch?v=kPP0c73_iX4 "Building a PC, part two")
 
 Bear in mind, this is the first time I have built a PC since I was 12 years old. 
+
+I have to tutor, will continue this post later.
