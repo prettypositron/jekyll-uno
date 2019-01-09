@@ -7,6 +7,23 @@ tags: [PC, Building, Hardware]
 
 I could not resist building a new PC. I was meant to do this at the ML Neuro lab, however we ran into red tape regarding Columbia's IT Department and their contract with HP. Nonetheless, I had toxic assets (crypto) which many retailers accepted, which is folly. I long charted the price trends of various components, and made my purchases at a dip which was unsurprisingly during Black Friday. 
 
+My method for choosing PC components is as follows. I go to a benchmark website such as [PassMark - G3D Mark
+High End Videocards - Updated 9th of January 2019](https://www.videocardbenchmark.net/high_end_gpus.html) and I go down the list until I find the most powerful card with the lowest price. Basically:
 
+\frac{Average G3D Mark}{Price of Product} where {Average G3D Mark Rank | Average G3D Mark Rank < 5} 
 
+In other terms, it is simply value but for high performing components. 
 
+Here are some visualizations that should make it clear as to how I made the right choice:
+      
+![alt text](https://prettypositron.github.io/minimal/images/gpubenchmarks.png)
+
+![alt text](https://prettypositron.github.io/minimal/images/pricetrends.png)
+
+I decided to document this for use as a potential tutorial. However, I did not have a tripod for my camera phone and due to the lack of space on my phone, I had to resort to an instagram livefeed. 
+
+Here is just Part Two (the other two parts are still uploading to YouTube). 
+
+[![](http://img.youtube.com/vi/kPP0c73_iX4/0.jpg)](http://www.youtube.com/watch?v=kPP0c73_iX4 "")
+
+Bear in mind, this is the first time I have built a PC since I was 12 years old. 
