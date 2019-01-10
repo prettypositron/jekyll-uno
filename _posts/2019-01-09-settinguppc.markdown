@@ -50,8 +50,7 @@ You don't want to 'cd' into some convoluted folder structure every single time. 
 
 7. I am not going to talk much about machine learning in this post just yet. But there are a few important theoretical concepts in probability that form the foundation of much of the approaches we take in ML. 
 
- * Markov Chains - well, really just a random walk in a state space (finite) that satisfies the Markov Property, which means that if you wish to predict where the chain will be at a future time, if we are given the present state, then the entire past history is irrelevant. 
- **given the present, the past and future are conditionally independent**
+ * Markov Chains - well, really just a random walk in a state space (finite) that satisfies the Markov Property, which means that if you wish to predict where the chain will be at a future time, if we are given the present state, then the entire past history is irrelevant. Given the present, the past and future are conditionally independent
  
  * Bayes' Theorem - really, Bayesian inference, is very different from the works of Markov in that you update the probability for a hypothesis as more evidence/information becomes available. 
 
