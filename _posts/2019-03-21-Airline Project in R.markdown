@@ -30,11 +30,11 @@ Until I figure out a way to install batch packages from CRAN, I will have to dow
 #### What is your build
 
 In case anyone was wondering, these are the specs for my current rig. Disregard the high CPU temperature as it is a misread. The CPU temp is between 29-35 degrees.:
-![](https://prettypositron.github.io/minimal/images/speccy.png)
+![](https://prettypositron.github.io/minimal/images/speccy.PNG)
 
 Here's also my [build guide](https://pcpartpicker.com/guide/JcLrxr/deep-learning-and-gaming-rig) and corresponding [build](https://pcpartpicker.com/b/zdTBD3)
 
-It's PCMark Benchmark:![](https://prettypositron.github.io/minimal/images/pcmark10.png)
+It's PCMark Benchmark:![](https://prettypositron.github.io/minimal/images/pcmark10.PNG)
 
 Some pretty pictures as well:
 
