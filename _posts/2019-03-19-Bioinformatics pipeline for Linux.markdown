@@ -9,7 +9,7 @@ A to Z.
 
 #### Install Linux
 
-You`re most likely using Win10, so just install the virtual box from Microsoft`s store.
+You're most likely using Win10, so just install the virtual box from Microsoft`s store.
 
 First `sudo apt-get update && apt-get upgrade -y`
 
