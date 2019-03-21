@@ -5,7 +5,7 @@ categories: [software, R, build]
 tags: [software, setting up, R, buildguide]
 ---
 
-#### Airline Projec
+## Airline Project
 
 [Airline Project](https://prettypositron.github.io/minimal/Airline%20Project.html)
 
