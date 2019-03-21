@@ -7,6 +7,8 @@ tags: [software, setting up, R, buildguide]
 
 ## Airline Project
 
+Here is a project I'm working on:
+
 [Airline Project](https://prettypositron.github.io/minimal/Airline%20Project.html)
 
 I'm using a dataset obtained from planespotters.net
@@ -27,6 +29,16 @@ I just installed the latest non-beta one from their website (Win10, 64-bit). It'
 
 Until I figure out a way to install batch packages from CRAN, I will have to download them piece-meal as I need them.
 
+#### Next Step
+
+Next step is to obtain a dataset for Boeing stocks historic trends and compare them to Boeing crashes.
+
+I can foresee a few things that may happen:
+
+Boeing may be "too big to fail" considering how they are the sole US manufacturers of airplanes, and how this is the second crash in a month. There may also be diplomatic tension with China especially during an election year (coming election year) and protectionist sentiment. If I had the capital, I would short it at the end of this green bubble, or simply purchase the stock as it is undervalued right now.
+
+![](https://prettypositron.github.io/minimal/images/boeing.jpg)
+
 #### What is your build
 
 In case anyone was wondering, these are the specs for my current rig. Disregard the high CPU temperature as it is a misread. The CPU temp is between 29-35 degrees.:
@@ -46,12 +58,4 @@ Some pretty pictures as well:
 ![](https://prettypositron.github.io/minimal/images/IMG_20190314_193124.jpg)
 ![](https://prettypositron.github.io/minimal/images/IMG_20190314_193130.jpg)
 
-#### Next Step
 
-Next step is to obtain a dataset for Boeing stocks historic trends and compare them to Boeing crashes.
-
-I can foresee a few things that may happen:
-
-Boeing may be "too big to fail" considering how they are the sole US manufacturers of airplanes, and how this is the second crash in a month. There may also be diplomatic tension with China especially during an election year (coming election year) and protectionist sentiment. If I had the capital, I would short it at the end of this green bubble, or simply purchase the stock as it is undervalued right now.
-
-![](https://prettypositron.github.io/minimal/images/boeing.jpg)
