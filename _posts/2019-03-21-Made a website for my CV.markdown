@@ -1,6 +1,6 @@
 ---
 title:  "CV"
-date:   2019-03-19 2:17
+date:   2019-03-21 20:56
 categories: [webdev, cv,]
 tags: [webdev, cv, css]
 ---
