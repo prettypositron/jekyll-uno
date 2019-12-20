@@ -6,7 +6,7 @@ tags: [research, astropy, cosmology, kepler]
 ---
 **Project $550 Million Dollar Thermometer:**
 
-![](https://prettypositron.github.io/minimal/images/KeplerTimeline.jpg)
+![](https://prettypositron.github.io/minimal/images/KeplerTimeline.png)
 
 The 'camera' has a total resolution of 94.6 megapixels, however this is simply too much data to be stored and sent back to earth so ~6% (5.4 megapixels) of pre-selected relevant pixels would be requantized, compressed, stored, and sent back to us. Though powered by solar panels, the photometer does not allow sunlight to enter it. The purpose of Kepler is to detect exoplanets, which involves distant stars, not the one that's close to us. The 'camera' is really a complex array of CCD's each of which has 84 data channels. An LDE (Local Detector Electronics box) converts the CCD output analog signals into digital data. The focal plane, basically the array of CCD's or the 'camera' is supercooled to -85C by heat pipes that carry the heat to an external radiator. Think of the heatsink you place ontop of your computer's CPU. The LDE contains pretty much all the sensors that detect the temperature of this fragile system. 
 
@@ -26,7 +26,7 @@ Pixels 0:19, 12:1111 are masked physical pixels used to measure dark current. Th
 
 Dark Current - Mostly undetectable at -85C, except for 'hot pixels' which have anomalously high dark current. 5 deviations threshold above the mean bias level. 
 
-![](https://prettypositron.github.io/minimal/images/MeanTemperature.jpg)
+![](https://prettypositron.github.io/minimal/images/MeanTemperature.png)
 
 Monthly, Monthly, Quarterly Roll, Monthly, Monthly, Quarterly Roll, Monthly, Monthly, Safe Mode Event, Quarterly Roll, nothing, nothing, Quarterly Roll. The general trend is explained by the seasons: from Spring, Summer, Fall, to Winter. This corresponds to the Mission Timeline I posted up top. How convenient that they provide data reassuring us of the "benign thermal environment" for the only period of time that didn't experience CME's or other failures. 
 
@@ -43,7 +43,7 @@ What to do:
 
 Here's an example of some upward pulses that could be due to instrumental noise: 
 
-![](https://prettypositron.github.io/minimal/images/upwardpulses.jpg)
+![](https://prettypositron.github.io/minimal/images/upwardpulses.png)
 
 4. Data Processing - Outlier Removal - Start with small stuff like a wide median filter. Then a Gaussian FIR filter. Then a 4th order Savitzky-Golay filter which is basically an FIR version of running a polynomial least-squares fit at every point. This means it doesn't just give estimates for the denoised signal, but also some of the derivatives. There's tons of filters, I'll see what happens. 
 
