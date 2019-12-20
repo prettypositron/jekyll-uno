@@ -45,7 +45,21 @@ Here's an example of some upward pulses that could be due to instrumental noise:
 
 ![](https://prettypositron.github.io/minimal/images/upwardpulses.jpg)
 
-4. Data Processing - Outlier Removal
+4. Data Processing - Outlier Removal - Start with small stuff like a wide median filter. Then a Gaussian FIR filter. Then a 4th order Savitzky-Golay filter which is basically an FIR version of running a polynomial least-squares fit at every point. This means it doesn't just give estimates for the denoised signal, but also some of the derivatives. There's tons of filters, I'll see what happens. 
+
+---
+
+**Project Killblue**
+
+I took one photo of a star in the blue daylight on the fourth of July at 11AM. I was never able to replicate it. I did try segmentation to remove things that were not blue, and edge detection of larger objects like the moon, but I could not do this for that tiny speck of a star. 
+
+I was able to take many photos of Jupiter. I used this as labeled data to train a CNN to be able to find it in photos where there are no stars, just the moon, and different times of day. I get so-so results when finding Jupiter in images with other stars. I don't nearly have 10,000 images of Jupiter though, and the images I do have are with my phone camera, so my training data set is a limiting factor. 
+
+I picked up an old book on [Information Theory](https://www.amazon.com/Introduction-Information-Theory-Symbols-Mathematics/dp/0486240614) to gain some much-needed insight into just what I am doing with a camera, but ultimately I just have been stuck at the taking photographs stage of this project. I can't lay idle though, and Prof. Hogg's [post](http://hoggresearch.blogspot.com/2019/08/visualizing-substructure-in-large-data.html) here gave me some ideas. I downloaded satellite data from [NASA Worldview](https://worldview.earthdata.nasa.gov/), particularly that of cloud formations. I chose cloud formations because that's the one constant among all of the different things recorded there (hurricanes, fires, etc.) I can make arbitrary categories of cloud formations that share some type of aesthetic quality thereby segmenting whole images. I can visualize these with masks, which I can also measure the size of. I've used [imgaug](https://imgaug.readthedocs.io/en/latest/index.html), [albumentations](albumentations), [catalyst](https://github.com/catalyst-team/catalyst), and pytorch's [segmentation models](https://github.com/qubvel/segmentation_models.pytorch). These are very helpful and I am able to produce thousands of images for training/test data. I was also experimenting with frequent pattern discovery to see if some of these categories of cloud formations appear frequently together. As for the machine learning aspect, I've used a variety of architectures that I can elaborate on later. At the moment, I am just trying to evaluate how I can use what I am doing in a way that is relevant and can bring new insight. 
+
+This [slideshow](https://www.dropbox.com/sh/ap7m9k7l8hf0jn8/AADBDjIM02uQlCAuMfUjxHmYa?dl=0&preview=Lucie-Smith_Ringberg_PDF.pdf) is very interesting. I think I can find which cloud features can be most informative to various things like sunglint, hurricanes, and ultimately climate change. 
+
+Again, I'm at the library so I can't get to writing code now. But I will next time.
 
 ---
 
