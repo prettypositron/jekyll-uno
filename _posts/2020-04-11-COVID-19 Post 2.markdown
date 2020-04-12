@@ -1,5 +1,5 @@
 ---
-title:  "COVID-19, Post 2 RNN model"
+title:  "COVID-19, Post 2"
 date:   2020-04-11 18:46
 categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, RNN model, machine learning, recurrent neural network]
