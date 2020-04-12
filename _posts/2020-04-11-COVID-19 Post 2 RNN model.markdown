@@ -4,13 +4,14 @@ date:   2020-04-11 18:46
 categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, RNN model, machine learning, recurrent neural network]
 ---
-** Update on Sigmoid Fit Model **
+
+#### Update on Sigmoid Fit Model
 
 [Updated today with data from 4/10/2020](https://prettypositron.github.io/minimal/COVID-19%20April%2011.html)
 
 We see that the model predicted 506.8708k total confirmed cases for the US for today (4/11/2020). As of 20:56 4/11/2020, the US has [532,879](https://www.worldometers.info/coronavirus/country/us/). That is around where my model predicts the value to be between the 12th and 13th of this month. 
 
-**RNN Model**
+#### RNN Model
 
 Basically it's a neural network that has a feed-forward loop added that connects a hidden layer to itself existing as a hidden state.
 
@@ -32,9 +33,9 @@ Here's a closer look at the final hidden state of the example RNN:
 As each successive step is processed, the RNN has trouble retaining information from the previous steps. In the above image, you can see the first two hidden states (from "What" and "time", for instance) are cut into small slivers by the time it reaches the final step. This is known as the *Vanishing Gradient* problem.
 
 Recall, that to train a neural network, there are three steps.
-*1. A forward pass is done and a prediction is made
-*2. This prediction is compared to the ground truth using a loss function. The loss function outputs an error value which is an estimate of how poorly the neural network is performing.
-*3. Last, this error value is used to do back propagation, which calculates the gradients for each node in the neural network.
+1. A forward pass is done and a prediction is made
+2. This prediction is compared to the ground truth using a loss function. The loss function outputs an error value which is an estimate of how poorly the neural network is performing.
+3. Last, this error value is used to do back propagation, which calculates the gradients for each node in the neural network.
 
 [](https://miro.medium.com/max/382/1*8eriEDJZisidMG_yyEDEAA.gif)
 
