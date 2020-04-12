@@ -4,7 +4,8 @@ date:   2020-04-03 08:10
 categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, sigmoid curve fitting, machine learning, eda]
 ---
-**Forecasting COVID-19 using Logistic Regression: Sigmoid-Fitting**
+
+#### Forecasting COVID-19 using Logistic Regression: Sigmoid-Fitting
 
 ![](https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/coronavirus-768x432.jpg)
 
@@ -12,7 +13,7 @@ tags: [research, sigmoid curve fitting, machine learning, eda]
 
 The data is available [here:](https://pages.semanticscholar.org/coronavirus-research)
 
-**Worldwide Trend*
+#### Worldwide Trend
 
 ![](https://prettypositron.github.io/minimal/images/ww.png)
 
@@ -81,7 +82,7 @@ Italy, Spain, Germany, and France are experiencing the worst of it.
 
 Spain, Germany, and France all show a daily growth that is more than that of Italy's now. UK is also reaching a growth rate comparable to Italy. These 4 nations are potentially more dangerous than Italy. Italy's rate of new cases has not been increasing since March 21st, most likely due to Lock-Down procedures.
 
-**Forecasting**
+#### Forecasting
 
 There's a lot of different things that can be done in Machine Learning to forecast trends. Here's my attempt at sigmoid fitting. Basically, with many natural processes in complex systems, you'll see an exponential growth until an inflection point is reached at which the slope ceases to increase (growth rate) resulting in an overall flattened curve. 
 
@@ -118,5 +119,7 @@ It predicted for April 2nd, 2020 in the USA: 239,048 Total Cases. The actual res
 
 --
 [Code where the above images are from; 4/3/2020](https://prettypositron.github.io/minimal/COVID-19%20April%203.html)
+
 [Attempt to find correlations between Temperature and COVID-19; 3/23/2020](https://prettypositron.github.io/minimal/COVID19-Temperature.html)
+
 [First EDA - 3/23/2020](https://prettypositron.github.io/minimal/COVID19%20(1).html)
