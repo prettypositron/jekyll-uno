@@ -48,3 +48,5 @@ This means gradients exponentially shrink as it back propagates down. Earlier la
 In general, RNN's have bad short term memory. To combat this, the Long Short-Term Memory (LSTM) is made. Or a Gated Recurrent Unit (GRU). These basically are RNN's that can learn long-term dependencies using mechanisms called 'gates'. These gates are just different tensor operations that can learn what information to add/remove to the hidden state. 
 
 I am not using an LSTM or GRU right now because an RNN trains faster and uses less computational resources. 
+
+---
