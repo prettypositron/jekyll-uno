@@ -1,5 +1,5 @@
 ---
-title:  "COVID-19, Post 4, SEIR model"
+title:  "COVID-19, Post 3, SEIR model"
 date:   2020-04-12 05:58
 categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, SIR model, SEIR model, machine learning]
