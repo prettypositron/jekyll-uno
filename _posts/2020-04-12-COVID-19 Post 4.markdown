@@ -2,13 +2,13 @@
 title:  "COVID-19, Post 4"
 date:   2020-04-12 20:21
 categories: [research, COVID-19, COVID, coronavirus]
-tags: [research, EDA, XGBoost, machine learning]
+tags: [research, inflection point, SEIR, machine learning]
 ---
 
 #### Update as of 21:04 
 #### Fixed the SEIR Model
 
-![](https://prettypositron.github.io/minimal/images/newplot (12).png)
+![](https://prettypositron.github.io/minimal/images/newplot (15).png)
 
 ![](https://prettypositron.github.io/minimal/images/newplot (13).png)
 
@@ -18,6 +18,9 @@ Here, look at it yourself, and remember the plots are *interactive*. Go down to 
 
 Here's the global curve:
 ![](https://prettypositron.github.io/minimal/images/newplot (14).png)
+
+And NY: 
+![](https://prettypositron.github.io/minimal/images/newplot (12).png)
 
 
 #### Update on Sigmoid Fit Model
