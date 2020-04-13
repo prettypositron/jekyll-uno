@@ -5,13 +5,20 @@ categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, EDA, XGBoost, machine learning]
 ---
 
-#### Background
+#### Update as of 21:04 
+#### Fixed the SEIR Model
 
-![](https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/coronavirus-768x432.jpg)
+![](https://prettypositron.github.io/minimal/images/newplot (12).png)
 
-"In response to the COVID-19 pandemic, the White House and a coalition of leading research groups have prepared the COVID-19 Open Research Dataset (CORD-19). CORD-19 is a resource of over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses. This freely available dataset is provided to the global research community to apply recent advances in natural language processing and other AI techniques to generate new insights in support of the ongoing fight against this infectious disease. There is a growing urgency for these approaches because of the rapid acceleration in new coronavirus literature, making it difficult for the medical research community to keep up."
+![](https://prettypositron.github.io/minimal/images/newplot (13).png)
 
-The data is available [here:](https://pages.semanticscholar.org/coronavirus-research)
+I fixed the SEIR model! The US has passed its inflection point as of 4/10 or two days ago. THIS IS WONDERFUL NEWS!!!!
+
+Here, look at it yourself, and remember the plots are *interactive*. Go down to the curve for the US: [SEIR Model Updated](https://prettypositron.github.io/minimal/COVID-19 SEIR Updated.html)
+
+Here's the global curve:
+![](https://prettypositron.github.io/minimal/images/newplot (14).png)
+
 
 #### Update on Sigmoid Fit Model
 
@@ -32,3 +39,14 @@ About my SEIR model post, the important plots didn't come up for that .html file
 I also have that RNN model which I didn't get to upload/finish yesterday, as well as an XGBoost model that I have to re-write (because of aforementioned issue), and then I'll fix the SEIR model because I am positive that will be the most accurate.
 
 It's just that as of now, the R_0 is like 6 for the US (compared to like 3.8 in Italy, and nearly 8 in NY) so that gives it such an exponential boost that it's all my model has to work on. 
+
+
+
+---
+#### Background
+
+![](https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/coronavirus-768x432.jpg)
+
+"In response to the COVID-19 pandemic, the White House and a coalition of leading research groups have prepared the COVID-19 Open Research Dataset (CORD-19). CORD-19 is a resource of over 45,000 scholarly articles, including over 33,000 with full text, about COVID-19, SARS-CoV-2, and related coronaviruses. This freely available dataset is provided to the global research community to apply recent advances in natural language processing and other AI techniques to generate new insights in support of the ongoing fight against this infectious disease. There is a growing urgency for these approaches because of the rapid acceleration in new coronavirus literature, making it difficult for the medical research community to keep up."
+
+The data is available [here:](https://pages.semanticscholar.org/coronavirus-research)
