@@ -1,0 +1,309 @@
+---
+title:  "COVID-19, Post 6"
+date:   2020-04-18 23:18
+categories: [research, COVID-19, CORD-19, coronavirus]
+tags: [research, drug discovery, therapeutic, PCA, machine learning]
+---
+## Latest Code 
+[COVID-19 Bibliometrics](https://prettypositron.github.io/minimal/COVID19 Bibliometrics.html)
+
+[COVID-19 Drugs and Vaccines](https://prettypositron.github.io/minimal/COVID-19 Drugs and Vaccines.html)
+
+<iframe src="https://codesandbox.io/embed/affectionate-fire-4j88d?fontsize=14&hidenavigation=1&theme=dark&view=preview" style="width:100%; height:600px; border:0; margin: 0 auto; border-radius: 4px; overflow:hidden;" title="affectionate-fire-4j88d" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+
+
+# Subtyping COVID-19 Therapeutic Research Findings
+
+## Summary
+
+The goal of this exercise is to study this literature provided by the Kaggle COVID-19 challenge organizing team, and to subtype the COVID-19 therapeutic research findings. Specifically, we carried out the following three parts of work:
+
+**Part A. Drugs that have been used in clinical trials for COVID-19.** We identified and characterized the drugs on clinical trials by integrating the FDA drug database and PubChem repository. We hand-curated and summarized the reported effectiveness for each drug. We presented the mutual similarity of chemical structures across the drugs used in clinical trials. 
+
+We categorized the drugs based on their molecular mechanisms, which may facilitate the discovery of related drugs of similar mechanisms and create effective cocktail treatment: 
+
+ Category 1. RNA mutagens 
+ 
+ Category 2. Protease inhibitors  
+ 
+ Category 3. Virus-entry blockers 
+
+ Category 4. Virus-release blockers
+ 
+ Category 5. Monoclonal antibodies
+ 
+
+**Part B. Drugs that have been proposed by computational works.** We identified the computational publications, categorized their approaches into the following categories and discussed their performance and applications in other disease domains, and potential limitations. 
+ 
+ Category 1. Gene-gene network-based algorithms. 
+
+ Category 2. Expression-based algorithms
+ 
+ Category 3. Docking simulation or protein structure-based for 
+                     
+   Category 3.a. Small molecules 
+                    
+   Category 3.b. Monoclonal antibodies
+ 
+
+**Part C. Drugs that have been proposed by in vitro experiments of COVID-19 invading human cells.** We characterized the chemical structures and analyzed the chemical similarity for this group.
+
+For this list, other than literature mining, we carried out a machine learning experiment to prioritize previously unexplored FDA-approved drugs for repurposing without ADMET evaluation. The hypothesis is that drugs that overlap the most globally in functionality to COVID-19 protein interactors are likely to be successful. After hand-removing the contaminations, we identified the following top candidates for repurposing: OLUMIANT(Baricitinib) treating rheumatoid arthritis, BRIMONIDINE, treating glaucoma, EDURANT(rilpivirine) treating Human Immunodeficiency Virus-1 (HIV-1), MARPLAN Treating depression, Corlanor (ivabradine) reduces the spontaneous pacemaker activity of the cardiac sinus node. We listed the potential contaminations/errors in the above candidate proposals.
+
+**Summary points and future recommended research topics for Phase 2. **
+    
+ Conclusion 1. There is not a single drug for which consistent positive response has been reported. 
+ 
+ Conclusion 2. There are overlaps between the drugs in clinical trials, proposed by computational analysis and proposed by in vitro experiments. However, some of the overlaps, especially those with computational analysis may come from a circularity in the methods.
+ 
+ Conclusion 3. Drug candidates proposed by computation and in vitro screening could be biased towards cancer-related targeted therapy and substantially contaminated by existing literature or sometimes anecdote. This bias/contamination may affect a significant number of computation-based drug-repurposing studies including our own work, and certainly not limited to COVID-19.
+ 
+ Future direction 1. We did not survey vaccines in this exercise. I think it will be meaningful to make an integrative survey of genome variation and vaccines (or maybe antibodies and drugs as well) into a same topic, therefore allowing connecting the subtypes of genome variations to what fraction of the virus strains that a vaccine could cover. 
+ 
+ Future direction 2. We suggest a topic on news (e.g., google news) retrieval for therapeutic development, as many (if not most) treatment response may not first appear in manuscripts. 
+
+Finally, we would like to take this opportunity to make one comment: Literature could be biased towards reporting positive results，known biology (e.g., cancer and immuno- drugs), and anecdotes, and we should take the results of this exercise and other documents critically. 
+
+## Part A Subtyping drugs currently in clinical trial
+##### A.1 Methods: 
+We first counted how many times each FDA drug occured in the documents provided by Kaggle:
+
+##### A.2 Results
+
+###### A.2.1 The number of publications each drug appeared, top ones, >=100 times, are (full list in sorted_alresult):
+*     103 hydrocortisone
+*     106 ritonavir
+*     111 prednisolone
+*     113 dv
+*     118 ciprofloxacin
+*     119 cyclosporine
+*     127 acyclovir
+*     134 azithromycin
+*     141 amoxicillin
+*     155 doxycycline
+*     159 dexamethasone
+*     166 triad
+*     177 chloramphenicol
+*     177 kanamycin
+*     238 isoflurane
+*     248 gentamicin
+*     370 bal
+*     383 adenosine
+*     436 insulin
+*     480 ribavirin
+*    1767 penicillin
+
+   
+###### A.2.2 the drugs that have been related to coronavirus in literature, and the top ones, >10 times, are (full list in sorted_alresult.coronavirus):
+*      10 times: amoxicillin
+*      10 times: fluorouracil
+*      10 times: kanamycin
+*      12 times: azithromycin
+*      12 times: hydrocortisone
+*      13 times: doxycycline
+*      13 times: levofloxacin
+*      14 dexamethasone
+*      14 isoflurane
+*      15 dv
+*      15 kaletra
+*      15 prednisolone
+*      15 tamiflu
+*      16 cyclosporine
+*      16 gentamicin
+*      18 tao
+*      19 acyclovir
+*      24 triad
+*      25 insulin
+*      35 remdesivir
+*      41 adenosine
+*      60 ritonavir
+*      66 bal
+*      86 penicillin
+*     150 ribavirin
+    
+    
+###### A.2.3 The drugs specifically related to COVID-19 in literature (sorted_alresult.covid19)
+*       1 acetaminophen
+*       1 acyclovir
+*       1 amoxicillin
+*       1 antitussive
+*       1 azithromycin
+*       1 bal
+*       1 ceftriaxone
+*       1 chloramphenicol
+*       1 digoxin
+*       1 doxycycline
+*       1 fluorouracil
+*       1 ganciclovir
+*       1 ibuprofen
+*       1 iclusig
+*       1 insulin
+*       1 levofloxacin
+*       1 penicillin
+*       1 sulfasalazine
+*       1 tigecycline
+*       2 adenosine
+*       2 triad
+*       3 darunavir
+*       4 tao
+*       7 kaletra
+*      12 ribavirin
+*      17 remdesivir
+*      22 ritonavir
+
+###### A.2.4 Literature summary
+
+After hand-removing the irrelevant ones, the drugs can be roughly categorized by their effective mechanisms into:
+
+| Group and Mechanism | Popular Drugs in Trials |
+| --- | --- |
+| RNA mutagens that stop the copying of the virus | Remdesivir, Favipiravir, Fluorouracil, Ribavirin, Acyclovir  |
+| Protease inhibitors that block the multiplication of the virus | Ritonavir, Lopinavir, Kaletra, Darunavir |
+| Stopping the entry of the virus into the host cell | Arbidol, Hydroxychloroquine, Chloroquine phosphate |
+| Stopping the release of the virus from the host cell | Oseltamivir |
+| Monoclonal antibodies targeting a virus protein/epitope | IL-6 monoclonal antibody, Spike (S) protein antibody |
+
+
+
+
+
+**A.2.4.1 RNA mutagens**
+
+Viruses need to copy themselves in order to invade the host and transmit (like cancer cells), thus it makes sense that mutagens that block the copying can be used as drugs. 
+
+   **Remdesivir**: It was studied in many publications related to coronavirus. It was suggested to be highly effective in the control of 2019-nCoV infection in vitro, while their cytotoxicity remains in control (0562f70516579d557cd1486000bb7aac5ccec2a1.json, 95cc4248c19a3cc9a54ebcfa09fc7c80518dac5d.json). It was also reported to significantly reduce lung viral load in mice and with successful clinical cases (0562f70516579d557cd1486000bb7aac5ccec2a1.json, 49ac69f362c27acbc6de0c5cbb640267e7a1e797.json). In clinical settings, it has been used as compassionate treatment. Other papers, e.g.,  3e9ae5329eecab16d7c39f1f6dc778cf4a53ee0d.json, suggest the effect is still to be verified.
+
+   **Favipiravir**: It was suggested to be a good candidate (58be092086c74c58e9067121a6ba4836468e7ec3.json). It has been used in trials to treat SARS-CoV-2 infections, while the scores of favipiravir docking with the targets in some virtual screenings are relatively low (based on a computation study 95cc4248c19a3cc9a54ebcfa09fc7c80518dac5d.json)
+
+   **Fluorouracil**: The RNA mutagen 5-fluorouracil (5-FU) treatment will also increase the U:C and A:G transitions. 
+
+   **Ribavirin**: It was suggested to be useful for MERS (e5f19b6daf956e815c779228cc0cad1293d65bbb.json). It has been reported to reduce death rate in COVID-19 patients: f294f0df7468a8ac9e27776cc15fa20297a9f040.json. 
+
+   **Acyclovir**: No statistical difference in treatment effect (baabfb35a321ea12028160e0d2c1552a2fda2dd5.json)
+
+**A.2.4.2 Protease inhibitors **
+
+   **Ritonavir**: It was suggested to inhibit proteases and thus block multiplication of the virus. It was reported to deliver a substantial clinical benefit for COVID-19 patients (0562f70516579d557cd1486000bb7aac5ccec2a1.json, and its effectiveness is suggested by *computational* docking studies (9e94f9379fd74fcacc4f3a57e03cbe9035efee8e.json), while others clinical studies showed no effect at all or 'failed' treatment (24e17488d399c436305c819953beae2961214771.json, 8349823092836fe397a59e38615d1491423dbe70.json,8349823092836fe397a59e38615d1491423dbe70.json, ). Previously, it was shown to be beneficial for treating SARS and MERS (3afd5fba7dc182ddfa769c0d766134b525581005.json ).
+
+   **Lopinavir**: Lopinavir is a protease inhibitor. It was reported with substantial benefit for treating COVID-10 patients (0562f70516579d557cd1486000bb7aac5ccec2a1.json). Most studies consider Lopinavir as a potential candidate. 
+
+   **Kaletra**: It is the combination of Ritonavir and Lopinavar.
+
+   **Darunavir**: The drug was suggested to be potentially beneficial by *computational* docking experiments (9e94f9379fd74fcacc4f3a57e03cbe9035efee8e.json), and in vivo studies (95cc4248c19a3cc9a54ebcfa09fc7c80518dac5d.json). 
+
+**A.2.4.3 By stopping the entry of the virus into the host cell **
+
+   **Arbidol**: It inhibits membrane fusion between virus particles and plasma membranes, but it shows no statistical difference in treating COVID-19 patients (baabfb35a321ea12028160e0d2c1552a2fda2dd5.json) 
+   
+   **Hydroxychloroquine, Chloroquine phosphate**: Some studies also suggest that hydroxycholoroquine is working by blocking the entry of the virus, though the exact mechanism is unknown (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7102587/). Chloroquine effectively inhibited SARS-CoV-2 in vitro (58be092086c74c58e9067121a6ba4836468e7ec3.json). Chloroquine phosphate was reported to have apparent efficacy and acceptable safety against COVID-19 in a multicenter clinical trials (462cbb326ccd8587cae7a3538c8c6712d9013698.json, b70d27459fd8143edf76721da40cdbca399c9fb1.json).Chloroquine has been recently written into official recommendation for empirical therapy of COVID-19 for its adequate safety data in human (0562f70516579d557cd1486000bb7aac5ccec2a1.json)
+
+**A.2.4.4 By stopping the release of the virus from the host cell**
+
+   **Oseltamivir**: Tamiflu, inhibitors of the neuraminidase enzyme, no statistical difference in treating COVID-19 (baabfb35a321ea12028160e0d2c1552a2fda2dd5.json) 
+
+The other drugs in the list are irrelevant in this context of effectiveness. Some are related to test of toxicity
+
+**A.2.4.5 By generating monoclonal antibodies targeting certain proteins of the virus**
+
+   **IL-6 monoclonal antibody**: the IL-6 monoclonal antibody-directed COVID-19 therapy has been used in clinical trial in China (No.ChiCTR2000029765) (7852aafdfb9e59e6af78a47af796325434f8922a.json, c8d206a4f9af0709b6e9ee90c4d854d482cb0784.json), and IL-6 level was suggested to serve as an indicator of poor prognosis, and was suggest to be used for these patients (c8437a45bfb84fb206fe03fd18d28858bae32651.json).
+  
+   **Spike (S) protein antibody**: It was suggested that monoclonal antibody against the S protein may 231 efficiently block the virus from entering the host (c8437a45bfb84fb206fe03fd18d28858bae32651.json). 
+   
+Note: some other drugs, though used to treat COVID-19, are not relevant to the discussion. For example, broad-spectrum antibiotics or fever reducers are often used in control arm. 
+
+##### A.3. Limitations
+
+The above analysis has the following limitations: 
+
+  1. We used a rather earlier version of the literature set (because the searching step took quite a long time), and some popular drugs, e.g. hydroxychloroquine are only discussed but without clear clinical conclusion yet. 
+
+  2. Literature could be substantially biased towards positive results and by computational methods (discussed below).
+  
+
+## Part B Subtyping computational approaches that are used to propose drug candidates
+
+We then subtyped computational methods developed to repurposing drugs for COVID-19.
+
+##### B.1 Methods
+
+During reading the literature curated in Part A, we came across computational studies that focus on predicting drugs suitable for repurposing for COVID-19. These works tend to propose many drugs. 
+
+
+##### B.2 Results
+##### B.2.1 Gene-gene network-based approaches
+
+**Example**: https://www.nature.com/articles/s41421-020-0153-3 repurposed drugs by network approaches based on homology analysis to other viruses. The authors proposed 16 potential drugs: Irbesartan, Torernifene, Camphor, Equilin, Mesalazine, Mercaptopurine, Paroxetine, Sirolimus, Carvedilol, Colchicine, Dactinomycin, Melatonin, Quinacrine, Eplerenone, Emodin, Oxymetholone. 
+
+**Background**: Network-based drug response has been intensively used in the cancer area and was shown to excel in several benchmarks. 
+
+##### B.2.2 Expression-based approaches
+
+**Example**: https://arxiv.org/abs/2003.14333 repurposed drugs for treating lung injury in COVID-19 by 'could best reverse abnormal gene expression caused by (SARS)-CoV-2-induced inhibition of ACE2 in lung cells,' an effective drug treatment is one that reverts the aberrant gene expression back
+to the normal levels'. The authors proposed the following drugs': geldanamycin, panobinostat, trichostatin A, narciclasine, COL-3 and CGP-60474.
+
+##### B.2.3 Docking or structural-based approaches
+
+**B.2.3.1 Small molecule prediction**
+
+**Example 1**: https://www.biorxiv.org/content/10.1101/2020.03.03.972133v1.full 'a novel advanced deep Q-learning network with the fragment-based drug design (ADQN-FBDD) for generating potential lead compounds targeting SARS-CoV-2 3CLpro' Prioritized 48 candidates by docking (supplement Table S1).
+
+**Example 2**: https://www.sciencedirect.com/science/article/pii/S2211383520302999  studied the proteins encoded by SARS-CoV-2 genes, compared them with proteins from other coronaviruses, predicted their structures, and built 19 structures that could be done by homology modeling, Library of ZINC drug database, natural products, 78 anti-viral drugs were screened against these targets plus human ACE2. Prioritized the hundreds of drugs, ranked by docking scores: e.g., Ribavirin, alganciclovir, β-Thymidine, Platycodin D, Chrysin,Neohesperidin, Lymecycline, Chlorhexidine, Alfuzosin, Betulonal, Valganciclovir, Chlorhexidine, Betulonal, Gnidicin.
+
+**B.2.3.2 Monoclonal antibody prediction**
+
+**Example 1: docking-based proposal of antibodies** https://www.biorxiv.org/content/10.1101/2020.02.22.951178v1.full.pdf The neutralizing antibodies are proposed by computationally docking to the S protein of COVID-19 by docking simulation.
+
+**Example 2: ACE2 pathway-based proposal of antibodies** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7079879/ Potential therapeutic approaches include a SARS-CoV-2 spike protein-based vaccine; a transmembrane protease serine 2 (TMPRSS2) inhibitor to block the priming of the spike protein; blocking the surface ACE2 receptor by using anti-ACE2 antibody or peptides; and a soluble form of ACE2 which should slow viral entry into cells through competitively binding with SARS-CoV-2 and hence decrease viral spread as well as protecting the lung from injury through its unique enzymatic function. MasR-mitochondrial assembly receptor, AT1R-Ang II type 1 receptor.
+
+**Background**: Docking has been used intensively in drug discovery in areas such as cancers. 
+
+##### B.3 Limitations
+
+* Computationally proposed drugs tend to be a lot in a single piece of article, sometimes, hundreds of drugs in a single study.
+* Most of the works adopted methods from other pharmacogenomics field that were previously developed for cancers. 
+* We are not aware these approaches have generated hypotheses that are used in real-world clinical trials even in popular fields, e.g. cancer, Alzheimer's. Thus, use them with cautions.
+
+
+## Part C. Drugs proposed by in vitro experiments
+
+#### C.1 Methods
+
+###### C.1.1 Data curation
+
+Other than the drugs used in clinical trials and computational methods, we found an interesting study that carried out genome-wide in vivo binding screening of the virus proteins and human proteins, and proposed 37 drugs that directly target these proteins in the supplementary table 6 of Gordon et al (https://www.biorxiv.org/content/10.1101/2020.03.22.002386v1.supplementary-material?versioned=true). These drugs are currently being screened by the authors: Loratadine, Daunorubicin, Midostaurin, Ponatinib, Silmitasertib, Valproic Acid, Haloperidol, Metformin, Migalastat, S-verapamil, Indomethacin, Ruxolitinib, Mycophenolic acid, Entacapone, Ribavirin, E-52862, Merimepodib, RVX-208, XL413, AC-55541, Apicidin, AZ3451, AZ8838, Bafilomycin A1, CCT365623, GB110, H-89, JQ1, PB28, PD-144418, RS-PPCC, TMCB, UCPH-101, ZINC1775962367, ZINC4326719, ZINC4511851, ZINC95559591.
+
+###### C.1.2 Construction of training set
+
+We carried out a machine learning exercise, with the hypothesis that the drugs that will be potentially effective should overlap globally in function of these drug targets. We could extract the chemical structure of 34 of the 37 drugs proposed by the authors, which are used as positive examples. The second positive set is the combination of the first positive set and four other drugs that are currently under clinical trial and whose chemical structure can be extracted: remdesivir, hydroxychloroquine, favipiravir and Vitamin C, and thus 38 in total.
+
+The negative training set, which is also the candidate set, is constructed using the FDA approved list, which was downloaded in Oct 2019 from https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm. This list has a total of 7305 drugs, 5596 of which we could obtain the fingerprinting structure.
+
+#### C.2 Results
+
+###### C.2.1 Top candidates in FDA approved drugs
+
+Among the FDA approved drugs, we identified some top candidates that do not exist in the training gold standard. We hand-searched in literature for each of the top candidates with a probability >0.05 (55 in total). Most of them come from contaminations, i.e., overlapping with an example in the training set even though the drug appears with a different name. 
+
+Cleaned-up list:
+
+| Drug name | Original usage | Potential issues in the candidate|
+| --- | --- | --- |
+| OLUMIANT(Baricitinib) | Janus kinase (JAK) inhibitor ||
+| MEKTOVI | Targeted therapy to treat BRAF V600E or V600K cancers | May come from bias in cancer targeted therapy/screening|
+| BRIMONIDINE | Treating glaucoma ||
+| CAPRELSA | kinase inhibitor, medullary thyroid cancer (MTC) | May come from bias in cancer targeted therapy/screening|
+| EDURANT(rilpivirine)| Treating Human Immunodeficiency Virus-1 (HIV-1) ||
+| MARPLAN | Treating depression | Some schizophrenia drugs are used in the protein interaction training set, and might result in an implicit contamination here|
+| Corlanor (ivabradine) | reduces the spontaneous pacemaker activity of the cardiac sinus node||
+| LORBRENA | kinase inhibitor, ALK mutant cancer| May come from bias in cancer targeted therapy/screening|
+| BRAFTOVI | kinase inhibitor, Metastatic Melanoma| May come from bias in cancer targeted therapy/screening|
+| TAVALISSE | kinase inhibitor indicated for the treatment of thrombocytopenia| May come from bias in cancer targeted therapy/screening|
+
+
+
+#### C.3 Limitations and biases in the finding
+
+Drugs proposed by in vitro or computational protein targets/gene-gene network approaches are definitely biased towards targeted therapies in cancers, because these drugs were intensively screened in cell line experiments. This is true for both the above list and probably the original list proposed through the binding experiments, and certainly other studies.
+
+Second, low scores only mean the drugs are not similar to others that are being investigated in the study, rather than they are not useful. Remdesivir had a high score of 0.09 (we are not sure if this is an implicit contamination from the training set), the others had low scores, including Vitamin C, hydroxychloroquine and favipiravir.
