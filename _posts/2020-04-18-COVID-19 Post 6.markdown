@@ -17,11 +17,11 @@ tags: [research, drug discovery, therapeutic, PCA, machine learning]
 
 ## Summary
 
-The goal of this exercise is to study this literature provided by the Kaggle COVID-19 challenge organizing team, and to subtype the COVID-19 therapeutic research findings. Specifically, we carried out the following three parts of work:
+The goal of this exercise is to study this literature provided by the Kaggle COVID-19 challenge organizing team, and to subtype the COVID-19 therapeutic research findings. Specifically, I carried out the following three parts of work:
 
-**Part A. Drugs that have been used in clinical trials for COVID-19.** We identified and characterized the drugs on clinical trials by integrating the FDA drug database and PubChem repository. We hand-curated and summarized the reported effectiveness for each drug. We presented the mutual similarity of chemical structures across the drugs used in clinical trials. 
+**Part A. Drugs that have been used in clinical trials for COVID-19.** I identified and characterized the drugs on clinical trials by integrating the FDA drug database and PubChem repository. I hand-curated and summarized the reported effectiveness for each drug. I presented the mutual similarity of chemical structures across the drugs used in clinical trials. 
 
-We categorized the drugs based on their molecular mechanisms, which may facilitate the discovery of related drugs of similar mechanisms and create effective cocktail treatment: 
+I categorized the drugs based on their molecular mechanisms, which may facilitate the discovery of related drugs of similar mechanisms and create effective cocktail treatment: 
 
  Category 1. RNA mutagens 
  
@@ -34,7 +34,7 @@ We categorized the drugs based on their molecular mechanisms, which may facilita
  Category 5. Monoclonal antibodies
  
 
-**Part B. Drugs that have been proposed by computational works.** We identified the computational publications, categorized their approaches into the following categories and discussed their performance and applications in other disease domains, and potential limitations. 
+**Part B. Drugs that have been proposed by computational works.** I identified the computational publications, categorized their approaches into the following categories and discussed their performance and applications in other disease domains, and potential limitations. 
  
  Category 1. Gene-gene network-based algorithms. 
 
@@ -47,9 +47,9 @@ We categorized the drugs based on their molecular mechanisms, which may facilita
    Category 3.b. Monoclonal antibodies
  
 
-**Part C. Drugs that have been proposed by in vitro experiments of COVID-19 invading human cells.** We characterized the chemical structures and analyzed the chemical similarity for this group.
+**Part C. Drugs that have been proposed by in vitro experiments of COVID-19 invading human cells.** I characterized the chemical structures and analyzed the chemical similarity for this group.
 
-For this list, other than literature mining, we carried out a machine learning experiment to prioritize previously unexplored FDA-approved drugs for repurposing without ADMET evaluation. The hypothesis is that drugs that overlap the most globally in functionality to COVID-19 protein interactors are likely to be successful. After hand-removing the contaminations, we identified the following top candidates for repurposing: OLUMIANT(Baricitinib) treating rheumatoid arthritis, BRIMONIDINE, treating glaucoma, EDURANT(rilpivirine) treating Human Immunodeficiency Virus-1 (HIV-1), MARPLAN Treating depression, Corlanor (ivabradine) reduces the spontaneous pacemaker activity of the cardiac sinus node. We listed the potential contaminations/errors in the above candidate proposals.
+For this list, other than literature mining, I carried out a machine learning experiment to prioritize previously unexplored FDA-approved drugs for repurposing without ADMET evaluation. The hypothesis is that drugs that overlap the most globally in functionality to COVID-19 protein interactors are likely to be successful. After hand-removing the contaminations, I identified the following top candidates for repurposing: OLUMIANT(Baricitinib) treating rheumatoid arthritis, BRIMONIDINE, treating glaucoma, EDURANT(rilpivirine) treating Human Immunodeficiency Virus-1 (HIV-1), MARPLAN Treating depression, Corlanor (ivabradine) reduces the spontaneous pacemaker activity of the cardiac sinus node. I listed the potential contaminations/errors in the above candidate proposals.
 
 **Summary points and future recommended research topics for Phase 2. **
     
@@ -59,15 +59,15 @@ For this list, other than literature mining, we carried out a machine learning e
  
  Conclusion 3. Drug candidates proposed by computation and in vitro screening could be biased towards cancer-related targeted therapy and substantially contaminated by existing literature or sometimes anecdote. This bias/contamination may affect a significant number of computation-based drug-repurposing studies including our own work, and certainly not limited to COVID-19.
  
- Future direction 1. We did not survey vaccines in this exercise. I think it will be meaningful to make an integrative survey of genome variation and vaccines (or maybe antibodies and drugs as well) into a same topic, therefore allowing connecting the subtypes of genome variations to what fraction of the virus strains that a vaccine could cover. 
+ Future direction 1. I did not survey vaccines in this exercise. I think it will be meaningful to make an integrative survey of genome variation and vaccines (or maybe antibodies and drugs as well) into a same topic, therefore allowing connecting the subtypes of genome variations to what fraction of the virus strains that a vaccine could cover. 
  
- Future direction 2. We suggest a topic on news (e.g., google news) retrieval for therapeutic development, as many (if not most) treatment response may not first appear in manuscripts. 
+ Future direction 2. I suggest a topic on news (e.g., google news) retrieval for therapeutic development, as many (if not most) treatment response may not first appear in manuscripts. 
 
-Finally, we would like to take this opportunity to make one comment: Literature could be biased towards reporting positive results，known biology (e.g., cancer and immuno- drugs), and anecdotes, and we should take the results of this exercise and other documents critically. 
+Finally, I would like to take this opportunity to make one comment: Literature could be biased towards reporting positive results，known biology (e.g., cancer and immuno- drugs), and anecdotes, and I should take the results of this exercise and other documents critically. 
 
 ## Part A Subtyping drugs currently in clinical trial
 ##### A.1 Methods: 
-We first counted how many times each FDA drug occured in the documents provided by Kaggle:
+I first counted how many times each FDA drug occured in the documents provided by Kaggle:
 
 ##### A.2 Results
 
@@ -216,18 +216,18 @@ Note: some other drugs, though used to treat COVID-19, are not relevant to the d
 
 The above analysis has the following limitations: 
 
-  1. We used a rather earlier version of the literature set (because the searching step took quite a long time), and some popular drugs, e.g. hydroxychloroquine are only discussed but without clear clinical conclusion yet. 
+  1. I used a rather earlier version of the literature set (because the searching step took quite a long time), and some popular drugs, e.g. hydroxychloroquine are only discussed but without clear clinical conclusion yet. 
 
   2. Literature could be substantially biased towards positive results and by computational methods (discussed below).
   
 
 ## Part B Subtyping computational approaches that are used to propose drug candidates
 
-We then subtyped computational methods developed to repurposing drugs for COVID-19.
+I then subtyped computational methods developed to repurposing drugs for COVID-19.
 
 ##### B.1 Methods
 
-During reading the literature curated in Part A, we came across computational studies that focus on predicting drugs suitable for repurposing for COVID-19. These works tend to propose many drugs. 
+During reading the literature curated in Part A, I came across computational studies that focus on predicting drugs suitable for repurposing for COVID-19. These works tend to propose many drugs. 
 
 
 ##### B.2 Results
@@ -262,7 +262,7 @@ to the normal levels'. The authors proposed the following drugs': geldanamycin, 
 
 * Computationally proposed drugs tend to be a lot in a single piece of article, sometimes, hundreds of drugs in a single study.
 * Most of the works adopted methods from other pharmacogenomics field that were previously developed for cancers. 
-* We are not aware these approaches have generated hypotheses that are used in real-world clinical trials even in popular fields, e.g. cancer, Alzheimer's. Thus, use them with cautions.
+* I are not aware these approaches have generated hypotheses that are used in real-world clinical trials even in popular fields, e.g. cancer, Alzheimer's. Thus, use them with cautions.
 
 
 ## Part C. Drugs proposed by in vitro experiments
@@ -271,19 +271,19 @@ to the normal levels'. The authors proposed the following drugs': geldanamycin, 
 
 ###### C.1.1 Data curation
 
-Other than the drugs used in clinical trials and computational methods, we found an interesting study that carried out genome-wide in vivo binding screening of the virus proteins and human proteins, and proposed 37 drugs that directly target these proteins in the supplementary table 6 of Gordon et al (https://www.biorxiv.org/content/10.1101/2020.03.22.002386v1.supplementary-material?versioned=true). These drugs are currently being screened by the authors: Loratadine, Daunorubicin, Midostaurin, Ponatinib, Silmitasertib, Valproic Acid, Haloperidol, Metformin, Migalastat, S-verapamil, Indomethacin, Ruxolitinib, Mycophenolic acid, Entacapone, Ribavirin, E-52862, Merimepodib, RVX-208, XL413, AC-55541, Apicidin, AZ3451, AZ8838, Bafilomycin A1, CCT365623, GB110, H-89, JQ1, PB28, PD-144418, RS-PPCC, TMCB, UCPH-101, ZINC1775962367, ZINC4326719, ZINC4511851, ZINC95559591.
+Other than the drugs used in clinical trials and computational methods, I found an interesting study that carried out genome-wide in vivo binding screening of the virus proteins and human proteins, and proposed 37 drugs that directly target these proteins in the supplementary table 6 of Gordon et al (https://www.biorxiv.org/content/10.1101/2020.03.22.002386v1.supplementary-material?versioned=true). These drugs are currently being screened by the authors: Loratadine, Daunorubicin, Midostaurin, Ponatinib, Silmitasertib, Valproic Acid, Haloperidol, Metformin, Migalastat, S-verapamil, Indomethacin, Ruxolitinib, Mycophenolic acid, Entacapone, Ribavirin, E-52862, Merimepodib, RVX-208, XL413, AC-55541, Apicidin, AZ3451, AZ8838, Bafilomycin A1, CCT365623, GB110, H-89, JQ1, PB28, PD-144418, RS-PPCC, TMCB, UCPH-101, ZINC1775962367, ZINC4326719, ZINC4511851, ZINC95559591.
 
 ###### C.1.2 Construction of training set
 
-We carried out a machine learning exercise, with the hypothesis that the drugs that will be potentially effective should overlap globally in function of these drug targets. We could extract the chemical structure of 34 of the 37 drugs proposed by the authors, which are used as positive examples. The second positive set is the combination of the first positive set and four other drugs that are currently under clinical trial and whose chemical structure can be extracted: remdesivir, hydroxychloroquine, favipiravir and Vitamin C, and thus 38 in total.
+I carried out a machine learning exercise, with the hypothesis that the drugs that will be potentially effective should overlap globally in function of these drug targets. I could extract the chemical structure of 34 of the 37 drugs proposed by the authors, which are used as positive examples. The second positive set is the combination of the first positive set and four other drugs that are currently under clinical trial and whose chemical structure can be extracted: remdesivir, hydroxychloroquine, favipiravir and Vitamin C, and thus 38 in total.
 
-The negative training set, which is also the candidate set, is constructed using the FDA approved list, which was downloaded in Oct 2019 from https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm. This list has a total of 7305 drugs, 5596 of which we could obtain the fingerprinting structure.
+The negative training set, which is also the candidate set, is constructed using the FDA approved list, which was downloaded in Oct 2019 from https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm. This list has a total of 7305 drugs, 5596 of which I could obtain the fingerprinting structure.
 
 #### C.2 Results
 
 ###### C.2.1 Top candidates in FDA approved drugs
 
-Among the FDA approved drugs, we identified some top candidates that do not exist in the training gold standard. We hand-searched in literature for each of the top candidates with a probability >0.05 (55 in total). Most of them come from contaminations, i.e., overlapping with an example in the training set even though the drug appears with a different name. 
+Among the FDA approved drugs, I identified some top candidates that do not exist in the training gold standard. I hand-searched in literature for each of the top candidates with a probability >0.05 (55 in total). Most of them come from contaminations, i.e., overlapping with an example in the training set even though the drug appears with a different name. 
 
 Cleaned-up list:
 
@@ -306,4 +306,4 @@ Cleaned-up list:
 
 Drugs proposed by in vitro or computational protein targets/gene-gene network approaches are definitely biased towards targeted therapies in cancers, because these drugs were intensively screened in cell line experiments. This is true for both the above list and probably the original list proposed through the binding experiments, and certainly other studies.
 
-Second, low scores only mean the drugs are not similar to others that are being investigated in the study, rather than they are not useful. Remdesivir had a high score of 0.09 (we are not sure if this is an implicit contamination from the training set), the others had low scores, including Vitamin C, hydroxychloroquine and favipiravir.
+Second, low scores only mean the drugs are not similar to others that are being investigated in the study, rather than they are not useful. Remdesivir had a high score of 0.09 (I are not sure if this is an implicit contamination from the training set), the others had low scores, including Vitamin C, hydroxychloroquine and favipiravir.
