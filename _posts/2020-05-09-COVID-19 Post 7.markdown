@@ -1,0 +1,86 @@
+---
+title:  "COVID-19, Post 7"
+date:   2020-05-09 14:00
+categories: [research, COVID-19, COVID, coronavirus]
+tags: [research, sigmoid curve fitting, machine learning, eda]
+---
+
+#### Forecasting COVID-19 using Logistic Regression: Sigmoid-Fitting
+[Last Updated: 5/9/2020 Code](https://prettypositron.github.io/minimal/COVID-19%20May%204%20(1).html)
+
+#### Worldwide Trend
+
+![](https://prettypositron.github.io/minimal/images/ww2.png)
+
+Clearly, we have exponential growth. Let's use a log-scale so we can see the growth of the growth rate. 
+
+![](https://prettypositron.github.io/minimal/images/wwlog2.png)
+
+The fatalities curve seems to just be a shift of the curve for confirmed cases, meaning that mortality rate is almost constant.
+
+Seems that the Mortality Rate peaked at 7% and is retracting back down below
+
+![](https://prettypositron.github.io/minimal/images/wwmort2.png)
+
+Let's look at a list of the top 30 countries and their total confirmed cases and fatalities.
+
+![](https://prettypositron.github.io/minimal/images/totalww2.png)
+
+Seems every other country has reached the flat end of the curve before reaching a quarter-million infected. The US continues to rise above 1.2 million, however, if you look carefully, you can see that the US's curve is becoming a line. This means its second-derivative has hit 1.
+
+![](https://prettypositron.github.io/minimal/images/top302.png)
+
+We see that in terms of fatalities, Europe is more serious than the US right now
+Let's look at mortality rate by country
+
+![](https://prettypositron.github.io/minimal/images/top30fatalities2.png)
+
+We see that in terms of fatalities, Europe is more serious than the US right now. Let's look at mortality rate by country, top 30.
+
+![](https://prettypositron.github.io/minimal/images/mortrate2.png)
+
+Seems as though Belgium, France, UK, Italy, Netherlands, Sweden, Hungary, and Spain (European countries) have a 10-16% mortality rate. This is is 2-3x as high as the US.
+Maybe we can look at countries whose mortality rates are low for insight. Though, many of these countries simply do not report/measure fatalities properly.
+
+![](https://prettypositron.github.io/minimal/images/fatalitiesmap2.png)
+![](https://prettypositron.github.io/minimal/images/mortalitymap2.png)
+
+Either the rates in tropical countries are low which leads to my hypothesis of the negative correlation between COVID-19 spread and temperature, humidity, # hours of daylight, and wind speed. However, it is just as likely, if not more, that these countries simply do not test as widely as the other Western nations.
+
+![](https://prettypositron.github.io/minimal/images/us2.png)
+
+Clearly, NY has the highest rate. Let's look at mortality rates.
+
+![](https://prettypositron.github.io/minimal/images/usmort2.png)
+
+It's increased to around 6% (last April 12th update, it was 2%). 
+Let's look at it by state.
+
+![](https://prettypositron.github.io/minimal/images/bystate2.png)
+
+Let's look at Europe.
+
+![](https://prettypositron.github.io/minimal/images/europemap2.png)
+
+Seems that the Northern and Eastern regions are doing better than Western and Southern regions. However, there seems to be a rise in confirmed cases in Russia which has changed from 4/12/2020.
+
+![](https://prettypositron.github.io/minimal/images/europemconfirmed2.png)
+
+Spain, Italy, Germany, and France are improving with flattened curves. The UK is starting to become linear. However, there is still what seems like exponential growth in the Russia.
+
+![](https://prettypositron.github.io/minimal/images/europefatalities2.png)
+
+Spain, Germany, and France all show a daily growth that is more than that of Italy's now. UK is also reaching a growth rate comparable to Italy. These 4 nations are potentially more dangerous than Italy. Italy's rate of new cases has not been increasing since March 21st, most likely due to Lock-Down procedures.
+
+Let's take a look at Asia. 
+
+![](https://prettypositron.github.io/minimal/images/asiamap.png)
+
+#### Forecasting
+
+[Here's the post where I explain Sigmoid-Fitting](https://prettypositron.github.io/minimal/2020/COVID-19-Post-1-2/)
+
+![](https://prettypositron.github.io/minimal/images/sigmoidfitting2.png)
+
+
+---
