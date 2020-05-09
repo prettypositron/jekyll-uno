@@ -1,0 +1,22 @@
+---
+title:  "What is R0?"
+date:   2020-05-09 15:18
+categories: [research, EDA, Machine Learning]
+tags: [research, visualization, machine learning, eda]
+---
+
+# What is $R_0$?
+
+In an epidemic, we measure the rate of spread of the infectious agent by its reproduction number. For instance, if one infected person spreads their infection to two people, each of those two people will spread their infections to two additional individuals each, respectively. This is a case where $R_0$ is 2. For any value of $R_0$ greater than 1, there will be exponential growth. 
+
+#### What does exponential growth mean?
+
+Here's an example. Take a regular piece of paper. It's about 0.1mm thick I would say. Fold that piece of paper in half. What happens to the thickness now? It doubles! It's now 0.2mm thick. Fold that paper again, it's 0.4mm thick. A handy way of expressing this is $2^N$ where N represents the number of times you fold the paper. You'd multiply this value by the thickness of the paper to find the overall thickness after folding N times. 
+
+To demonstrate the power of exponential growth, let's fold this piece of paper 42 times. 
+
+Paper Thickness: 0.1mm = 0.0001m = 1E-4m
+Number of Folds (N) = 42
+Thickness after folding 42 times: $2^42$ * 1E-4m = 4.4E12 * 1E-4m = 4.4E8m
+
+In other words, folding a piece of paper 42 times results in a thickness of 440 million meters! To put this in perspective, the distance from the Earth to the Moon is only 384.4 million meters! 
