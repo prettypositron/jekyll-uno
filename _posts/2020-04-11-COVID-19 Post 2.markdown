@@ -5,7 +5,7 @@ categories: [research, COVID-19, COVID, coronavirus]
 tags: [research, RNN model, machine learning, recurrent neural network]
 ---
 
-#### Background
+#### Background:  sigmoid
 
 ![](https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/coronavirus-768x432.jpg)
 
