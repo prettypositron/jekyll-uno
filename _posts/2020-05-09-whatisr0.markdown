@@ -15,3 +15,4 @@ Also, here's some new code.
 
 [SIR R0 Values](https://prettypositron.github.io/minimal/SIR R0 values (1).html)
 
+[COVID-19 Comparisons and CNN Predictions](https://prettypositron.github.io/minimal/COVID-19 Comparisons.html)
