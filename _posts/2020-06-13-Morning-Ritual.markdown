@@ -8,7 +8,7 @@ categories:
 # Wake up: Hygiene
 
 1. Brush teeth using Sonicare 4100 using Colgate Total (triclosan)
-	* sonic tooth brushes[^3] and triclosan are the best ammunition in fighting gum disease[^1][^2]
+	* sonic tooth brushes{[^3]} and triclosan are the best ammunition in fighting gum disease[^1][^2]
 2. Massage gums
 3. Brush tongue
 4. Floss
@@ -81,8 +81,9 @@ categories:
 ---
 
 Sources: 
-[^1]Stewart, B, Shibli, JA, Araujo, M, et al. Effects of a toothpaste containing 0.3% triclosan on periodontal parameters of subjects enrolled in a regular maintenance program: A secondary analysis of a 2‐year randomized clinical trial. J Periodontol. 2020; 91: 596– 605. <https://doi.org/10.1002/JPER.18-0501>
-[^2]Monteiro, M.F., Tonelli, H., Reis, A.A. et al. Triclosan toothpaste as an adjunct therapy to plaque control in children from periodontitis families: a crossover clinical trial. Clin Oral Invest 24, 1421–1430 (2020). <https://doi.org/10.1007/s00784-019-03121-6>
+[^1]: Stewart, B, Shibli, JA, Araujo, M, et al. Effects of a toothpaste containing 0.3% triclosan on periodontal parameters of subjects enrolled in a regular maintenance program: A secondary analysis of a 2‐year randomized clinical trial. J Periodontol. 2020; 91: 596– 605. <https://doi.org/10.1002/JPER.18-0501>
+
+[^2]:Monteiro, M.F., Tonelli, H., Reis, A.A. et al. Triclosan toothpaste as an adjunct therapy to plaque control in children from periodontitis families: a crossover clinical trial. Clin Oral Invest 24, 1421–1430 (2020). <https://doi.org/10.1007/s00784-019-03121-6>
 [^3]Ohsumi, T., Takenaka, S., Sakaue, Y. et al. Adjunct use of mouth rinses with a sonic toothbrush accelerates the detachment of a Streptococcus mutans biofilm: an in vitro study. BMC Oral Health 20, 161 (2020). https://doi.org/10.1186/s12903-020-01144-0
 [^4]Catecholaminergic modulation of indices of cognitive flexibility: A pharmaco-tDCS study
 Dennison, Olivia et al. Brain Stimulation: Basic, Translational, and Clinical Research in Neuromodulation, Volume 12, Issue 2, 290 - 295. Published:December 07, 2018. DOI:https://doi.org/10.1016/j.brs.2018.12.001
