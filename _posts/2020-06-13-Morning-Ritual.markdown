@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Becoming Ubermensch: Morning Ritual"
-date:   2020-13-06 11:26:45 +0100
+date:   2020-06-13 11:26:45 +0100
 categories:
 ---
 
